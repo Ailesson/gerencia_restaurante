@@ -5,7 +5,8 @@
 ```bash
 
 cd backend
-python -m venv venv
+python3 -m venv venv # Para Linux
+python -m venv venv # Para Windows
 source venv/bin/activate  # Para Linux
 venv\Scripts\activate  # Para Windows
 pip install -r requirements.txt
@@ -36,8 +37,12 @@ DATABASE_NAME=gerencia_restaurante
 DATABASE_PORT=3306
 
 ```
+### No arquivo alembic.ini 
 
-### Migrando as tabelas do projeto para o banco de dados
+### Migrando as tabelas do projeto para o banco de dados mude a sqlalchemy.url para os seus dados, exemplo:
+```bash
+sqlalchemy.url = mysql+pymysql://usuario:123@localhost:3306/gerencia_restaurante
+```
 
 ```bash
 alembic upgrade head
