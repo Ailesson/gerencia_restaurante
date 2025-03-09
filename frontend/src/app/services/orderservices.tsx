@@ -28,7 +28,6 @@ export const getOrders = async (): Promise<pedido_response[]> => {
     return response.data;
 };
 
-// Criar pedido com o tipo correto
 export const createOrder = async (orderData: pedido_request): Promise<pedido_response> => {
     const response = await api.post("/orders", orderData);
     return response.data;
@@ -55,7 +54,7 @@ export const updateOrder = async (orderId: number, orderData: pedido_request): P
 
 export const deleteOrder = async (orderId: number): Promise<{ message: string }> => {
     const response = await api.delete(`/orders/${orderId}`, {
-        params: { pedido_id: Number(orderId) }, // Converte para número
+        params: { pedido_id: Number(orderId) },
     });
     return response.data;
 };
