@@ -32,9 +32,21 @@ Com o banco de dados criado adicione os dados necessários no arquivo .env
 DATABASE_USER= usuario
 DATABASE_HOST=localhost
 DATABASE_PASSWORD=123
-DATABASE_NAME=restaurante
+DATABASE_NAME=gerencia_restaurante
 DATABASE_PORT=3306
 
+```
+
+### Migrando as tabelas do projeto para o banco de dados
+
+```bash
+alembic upgrade head
+```
+
+### Iniciando api
+```bash
+python3 api.py
+python3 api.py
 ```
 
 
