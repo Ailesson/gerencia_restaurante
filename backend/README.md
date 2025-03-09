@@ -25,5 +25,13 @@ FLUSH PRIVILEGES;
 
 ```
 
+### Conectando ao backend
+
+Com o banco de dados criado adicione os dados necessários no arquivo .env
+```bash
+
+
+```
+
 
 
