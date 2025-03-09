@@ -7,16 +7,13 @@ const CriarMesa = () => {
   const [error, setError] = useState('');
   
 
-  // Função para criar mesa
   const handleCreateTable = async () => {
     try {
       const data: mesa_response = await createTable();
 
-      // Se a criação da mesa for bem-sucedida, mostra as informações
       setMesaId(data.id);
       setStatus('Mesa criada com sucesso!');
     } catch (err) {
-      // Caso ocorra um erro, mostra a mensagem de erro
       setError('Erro ao criar mesa!');
       console.error(err);
     }
