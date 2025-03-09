@@ -1,6 +1,6 @@
 
 ## Começando
-Com o backend já inicializado e o Next js intalado, execute o servidor de desenvolvimento:
+Com o backend já inicializado e o Next js intalado e um novo terminal aberto, execute o servidor de desenvolvimento:
 
 ```bash
 
