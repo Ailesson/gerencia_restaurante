@@ -59,6 +59,7 @@ Este é um projeto de teste para um sistema de restaurante, desenvolvido para au
 -# Clone este repositório:
 git clone https://github.com/Ailesson/Teste_restaurante.git
 
--#Siga para o README.MD do diretório backend
 
 ```
+
+Siga para o README.md do diretório backend
