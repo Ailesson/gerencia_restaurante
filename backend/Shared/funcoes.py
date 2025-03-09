@@ -61,13 +61,11 @@ def delete_order_intem(pedido_id: int, db: Session):
     status=True
 
 
-# Função para reiniciar o auto-increment de uma tabela
 def reset_auto_increment(tabela: str, db: Session):
     try:
-        # Executa o comando SQL para reiniciar o auto-increment
         query = text(f"ALTER TABLE {tabela} AUTO_INCREMENT = 1;")
-        db.execute(query)  # Executa o comando SQL
-        db.commit()  # Commit após a execução
+        db.execute(query)
+        db.commit()
         print(f"Auto-increment da tabela {tabela} reiniciado.")
     except Exception as e:
         print(f"Erro ao reiniciar auto-increment: {e}")
