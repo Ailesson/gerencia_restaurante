@@ -29,7 +29,11 @@ FLUSH PRIVILEGES;
 
 Com o banco de dados criado adicione os dados necessários no arquivo .env
 ```bash
-
+DATABASE_USER= usuario
+DATABASE_HOST=localhost
+DATABASE_PASSWORD=123
+DATABASE_NAME=restaurante
+DATABASE_PORT=3306
 
 ```
 
