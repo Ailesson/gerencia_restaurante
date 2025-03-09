@@ -5,8 +5,8 @@ import { getTables, pedido4mesa_response, closeTable } from "../services/tablese
 
 const OrderList: React.FC = () => {
     const [tables, setTables] = useState<pedido4mesa_response[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);  // Estado para controlar o carregamento
-    const [error, setError] = useState<string | null>(null); // Estado para erros
+    const [loading, setLoading] = useState<boolean>(true); 
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchTables = async () => {
@@ -16,7 +16,7 @@ const OrderList: React.FC = () => {
             } catch (err) {
                 setError("Erro ao carregar pedidos.");
             } finally {
-                setLoading(false);  // Finaliza o estado de carregamento, independentemente do sucesso ou erro
+                setLoading(false);
             }
         };
         fetchTables();
@@ -62,7 +62,6 @@ const OrderList: React.FC = () => {
                         </div>
                         )}
 
-                        {/* Botão de exclusão */}
                         {table.status === 'Fechada' && (
                             <button 
                                 onClick={() => handleDelete(table.mesa_id)}
