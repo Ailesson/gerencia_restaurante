@@ -58,13 +58,16 @@ Este é um projeto de teste para um sistema de restaurante, desenvolvido para au
 
 -# Clone este repositório:
 git clone https://github.com/Ailesson/Teste_restaurante.git
+```
 
-# Acesse o diretório do projeto:
+# Acesse o backend
+```bash
 
 cd backend
-
-# Execute o projeto:
-python api.py
+python -m venv venv
+source venv/bin/activate  # Para Linux/macOS
+venv\Scripts\activate  # Para Windows
+pip install -r requirements.txt
 
 ```
 
