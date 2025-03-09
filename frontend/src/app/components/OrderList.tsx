@@ -29,7 +29,7 @@ const OrderList: React.FC = () => {
 
         try {
             await deleteOrder(orderId);
-            setOrders(orders.filter(order => order.id !== orderId)); // Remove da lista após deletar
+            setOrders(orders.filter(order => order.id !== orderId)); 
         } catch (err) {
             alert("Erro ao excluir pedido.");
         }
@@ -47,28 +47,28 @@ const OrderList: React.FC = () => {
     };
 
     const handleUpdate = async (orderId: number, tableId: number) => {
-        let addItem: string = "Sim"; // Agora pode ser reatribuída
-        const order_item: number[] = []; // Corrigido o tipo
+        let addItem: string = "Sim";
+        const order_item: number[] = [];
         const quantity_item: number[] = [];
         
-        while (addItem.toLowerCase() === "sim") { // Ignora diferenças de maiúsculas/minúsculas
+        while (addItem.toLowerCase() === "sim") {
             const itemId = Number(prompt("Digite o ID do item:"));
             const quantity = Number(prompt("Digite a quantidade do item:"));
         
-            if (!isNaN(itemId) && !isNaN(quantity)) { // Garante que o usuário digitou números válidos
+            if (!isNaN(itemId) && !isNaN(quantity)) { 
                 order_item.push(itemId);
                 quantity_item.push(quantity);
             } else {
                 alert("Entrada inválida. Digite números válidos.");
             }
         
-            addItem = prompt("Quer adicionar mais um item? (Sim/Não)") || "Não"; // Se `null`, assume "Não"
+            addItem = prompt("Quer adicionar mais um item? (Sim/Não)") || "Não"; 
         }
         
         
         const updatedOrderData: pedido_request = {
             table_id: tableId,
-            order_item: order_item, // Pode ser atualizado conforme necessário
+            order_item: order_item,
             quantity_item: quantity_item
         };
 
@@ -77,8 +77,7 @@ const OrderList: React.FC = () => {
 
             setOrders(orders.map(order => 
                 order.id === orderId ? updatedOrder : order
-            )); // Atualiza o pedido na lista
-
+            )); 
             alert("Pedido atualizado com sucesso!");
         } catch (err) {
             alert("Erro ao atualizar pedido.");
@@ -106,7 +105,6 @@ const OrderList: React.FC = () => {
                         <br />
                         <span className="text-gray-600">Criado em: {new Date(order.created_at).toLocaleString()}</span>
 
-                        {/* Exibe os itens do pedido */}
                         <div className="mt-2">
                             <h4 className="font-semibold">Itens:</h4>
                             <ul className="space-y-1">
@@ -117,8 +115,7 @@ const OrderList: React.FC = () => {
                                 ))}
                             </ul>
                         </div>
-
-                        {/* Botões de Ações */}
+                        
                         <div className="mt-3 flex gap-2">
                             <button 
                                 onClick={() => handleDelete(order.id)}
