@@ -6,7 +6,7 @@
 
 cd backend
 python -m venv venv
-source venv/bin/activate  # Para Linux/macOS
+source venv/bin/activate  # Para Linux
 venv\Scripts\activate  # Para Windows
 pip install -r requirements.txt
 
