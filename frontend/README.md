@@ -3,6 +3,7 @@
 Com o backend já inicializado e o Next js intalado e um novo terminal aberto, execute o servidor de desenvolvimento:
 
 ```bash
+cd frontend
 
 npm install
 
