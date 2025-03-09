@@ -56,6 +56,6 @@ Este é um projeto de teste para um sistema de restaurante, desenvolvido para au
 
 ```bash
 
--# Clone este repositório:
+### Clone este repositório:
 git clone https://github.com/Ailesson/Teste_restaurante.git
 ```
