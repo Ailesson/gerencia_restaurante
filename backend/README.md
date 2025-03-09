@@ -51,6 +51,6 @@ python api.py # Para Windows
 
 A API estará disponivel em : http://localhost:8002/docs#/
 
-Siga para o README.MD do diretório frontend
+Siga para o README.md do diretório frontend
 
 
