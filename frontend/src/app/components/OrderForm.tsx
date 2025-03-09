@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { createOrder } from '../services/orderservices';
 
 const OrderForm: React.FC = () => {
-    const [tableId, setTableId] = useState<number | "">("");  // Inicialize com uma string vazia
-    const [orderItems, setOrderItems] = useState<{ itemId: number, quantity: number }[]>([]); // Lista de itens com quantidade
+    const [tableId, setTableId] = useState<number | "">("");
+    const [orderItems, setOrderItems] = useState<{ itemId: number, quantity: number }[]>([]); 
     const [loading, setLoading] = useState(false); // Estado de carregamento
 
     const handleAddItem = () => {
@@ -24,7 +24,7 @@ const OrderForm: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
     
-        if (tableId === "" || orderItems.length === 0) return;  // Verifique se a mesa está preenchida corretamente
+        if (tableId === "" || orderItems.length === 0) return; 
     
         setLoading(true);
     
@@ -35,12 +35,12 @@ const OrderForm: React.FC = () => {
         };
     
         try {
-            await createOrder(orderData); // Certifique-se de que createOrder está funcionando corretamente
+            await createOrder(orderData);
             alert("Pedido criado com sucesso!");
         } catch (error) {
             alert("Erro ao criar pedido.");
         } finally {
-            setTableId("");  // Resetando após a criação
+            setTableId("");
             setOrderItems([]);
             setLoading(false);
         }
@@ -50,7 +50,6 @@ const OrderForm: React.FC = () => {
         <div className="p-4 max-w-lg mx-auto bg-white shadow-md rounded-lg mt-6">
             <h2 className="text-xl font-semibold mb-4">Novo Pedido</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Campo para o ID da mesa */}
                 <div>
                     <label className="block font-medium">Mesa</label>
                     <input
@@ -62,7 +61,6 @@ const OrderForm: React.FC = () => {
                     />
                 </div>
 
-                {/* Seção para adicionar itens ao pedido */}
                 <div>
                     <h3 className="font-medium">Itens do Pedido</h3>
                     <ul className="space-y-2">
@@ -88,7 +86,6 @@ const OrderForm: React.FC = () => {
                     </button>
                 </div>
 
-                {/* Botão para submeter o pedido */}
                 <button
                     type="submit"
                     className={`w-full ${loading ? "bg-gray-500" : "bg-blue-600"} text-white p-2 rounded-md`}
