@@ -52,7 +52,7 @@ Este é um projeto de teste para um sistema de restaurante, desenvolvido para au
 
 ![image](https://github.com/user-attachments/assets/3f24592a-7f2a-491c-892b-465bb30d3e99)
 
-## Intalação 
+## Instalação 
 
 ```bash
 
