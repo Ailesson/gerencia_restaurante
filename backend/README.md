@@ -1,4 +1,7 @@
 # Acesse o backend
+
+## Com o Diretório já clonado execute os seguintes comandos: 
+
 ```bash
 
 cd backend
