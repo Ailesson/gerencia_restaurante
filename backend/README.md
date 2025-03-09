@@ -45,9 +45,12 @@ alembic upgrade head
 
 ### Iniciando api
 ```bash
-python3 api.py
-python3 api.py
+python3 api.py # Para Linux
+python api.py # Para Windows
 ```
 
+A API estará disponivel em : http://localhost:8002/docs#/
+
+Siga para o README.MD do diretório frontend
 
 
