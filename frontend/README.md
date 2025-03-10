@@ -15,7 +15,8 @@ Abra http://localhost:3000 no seu navegador para ver o resultado.
 
 Com isso tera acesso a esta página: 
 
-![image](https://github.com/user-attachments/assets/a615f4aa-9a3f-4777-a10e-4b374dbb3594)
+![image](https://github.com/user-attachments/assets/04aaba4e-3ae6-4dbd-aef1-9991fc739bf5)
+
 
 Onde poderá:
 criar pedidos:
