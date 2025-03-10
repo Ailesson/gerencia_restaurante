@@ -39,10 +39,11 @@ DATABASE_PORT=3306
 ```
 ### No arquivo alembic.ini 
 
-### Migrando as tabelas do projeto para o banco de dados mude a sqlalchemy.url para os seus dados, exemplo:
 ```bash
 sqlalchemy.url = mysql+pymysql://usuario:123@localhost:3306/gerencia_restaurante
 ```
+
+### Migrando as tabelas do projeto para o banco de dados mude a sqlalchemy.url para os seus dados, exemplo:
 
 ```bash
 alembic upgrade head
