@@ -46,7 +46,7 @@ Este é um projeto de teste para um sistema de restaurante, desenvolvido para au
 
 ## Interface do Sitema
 
-![image](https://github.com/user-attachments/assets/a615f4aa-9a3f-4777-a10e-4b374dbb3594)
+![image](https://github.com/user-attachments/assets/04aaba4e-3ae6-4dbd-aef1-9991fc739bf5)
 
 ## Documentação da API
 
