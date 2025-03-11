@@ -40,7 +40,7 @@ DATABASE_PORT=3306
 ### No arquivo alembic.ini mude a sqlalchemy.url para os seus dados, exemplo
 
 ```bash
-sqlalchemy.url = mysql+pymysql://usuario:123@localhost:3306/gerencia_restaurante
+sqlalchemy.url = mysql+pymysql://usuario:123@127.0.0.1:3306/gerencia_restaurante
 ```
 
 ### Migrando as tabelas do projeto para o banco de dados:
